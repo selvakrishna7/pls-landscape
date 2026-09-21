@@ -1,15 +1,31 @@
-
 import "./App.css";
+
 import Navbar from "./components/Navbar";
+import ServiceDetails from "./pages/ServiceDetails";
+import servicesData from "./data/servicesData";
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 import aboutImage from "./image/Gemini_Generated_Image_ifdun3ifdun3ifdu.png";
 import heroImage from "./image/vecteezy_man-in-a-blue-polo-shirt-mowing-the-green-lawn-with-a-red_85160393.jpg";
 
-function App() {
+import { Link } from "react-router-dom";
+
+
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+function HomePage() {
   return (
     <div className="app">
 
       <Navbar />
+
 
       {/* =====================================================
           HERO
@@ -22,7 +38,9 @@ function App() {
           "--hero-image": `url("${heroImage}")`,
         }}
       >
+
         <div className="page-container">
+
           <div className="hero-content">
 
             <p className="hero-tag">
@@ -41,7 +59,11 @@ function App() {
             </p>
 
             <div className="hero-buttons">
-              <a href="#services" className="btn-primary">
+
+              <a
+                href="#services"
+                className="btn-primary"
+              >
                 Explore Services
               </a>
 
@@ -53,10 +75,13 @@ function App() {
               >
                 Get a Quote
               </a>
+
             </div>
 
           </div>
+
         </div>
+
       </main>
 
 
@@ -64,7 +89,10 @@ function App() {
           ABOUT
       ===================================================== */}
 
-      <section id="about" className="about-section">
+      <section
+        id="about"
+        className="about-section"
+      >
 
         <div className="page-container">
 
@@ -79,13 +107,15 @@ function App() {
               <h2>
                 We shape
                 <br />
-                <span>spaces that feel alive.</span>
+                <span>
+                  spaces that feel alive.
+                </span>
               </h2>
 
               <p>
-                PLS Landscape & Engineering creates thoughtful outdoor
-                environments that combine natural beauty, practical
-                design and reliable workmanship.
+                PLS Landscape & Engineering creates thoughtful
+                outdoor environments that combine natural beauty,
+                practical design and reliable workmanship.
               </p>
 
             </div>
@@ -103,13 +133,17 @@ function App() {
               />
 
               <div className="about-image-label">
-                <span>01</span>
+
+                <span>
+                  01
+                </span>
 
                 <p>
                   Landscape
                   <br />
                   & Engineering
                 </p>
+
               </div>
 
             </div>
@@ -130,18 +164,21 @@ function App() {
                 </h3>
 
                 <p>
-                  From residential gardens to commercial outdoor spaces,
-                  we develop landscaping solutions that are both visually
-                  appealing and functional.
+                  From residential gardens to commercial outdoor
+                  spaces, we develop landscaping solutions that
+                  are both visually appealing and functional.
                 </p>
 
                 <p>
                   Our approach combines careful planning, quality
-                  workmanship and attention to detail to create outdoor
-                  spaces that complement each property.
+                  workmanship and attention to detail to create
+                  outdoor spaces that complement each property.
                 </p>
 
-                <a href="#contact" className="about-link">
+                <a
+                  href="#contact"
+                  className="about-link"
+                >
                   Start a conversation
                   <span>↗</span>
                 </a>
@@ -161,13 +198,17 @@ function App() {
           SERVICES
       ===================================================== */}
 
-      <section id="services" className="services-section">
+      <section
+        id="services"
+        className="services-section"
+      >
 
         <div className="page-container">
 
           <div className="section-heading">
 
             <div>
+
               <div className="section-label">
                 OUR SERVICES
               </div>
@@ -175,6 +216,7 @@ function App() {
               <h2>
                 What We Do
               </h2>
+
             </div>
 
             <p>
@@ -187,76 +229,58 @@ function App() {
 
           <div className="services-grid">
 
-            <article className="service-card">
-              <span>01</span>
+            {servicesData.map((service, index) => (
 
-              <h3>
-                Landscape Design
-              </h3>
+              <article
+                className="service-card"
+                key={service.id}
+              >
 
-              <p>
-                Thoughtful landscape design for beautiful
-                and functional outdoor environments.
-              </p>
+                {/* SERVICE IMAGE */}
 
-              <div className="service-arrow">
-                ↗
-              </div>
-            </article>
+                <div className="service-image">
 
+                  <img
+                    src={service.heroImage}
+                    alt={service.title}
+                    loading="lazy"
+                  />
 
-            <article className="service-card">
-              <span>02</span>
-
-              <h3>
-                Garden Landscaping
-              </h3>
-
-              <p>
-                Garden landscaping solutions tailored to
-                your property and requirements.
-              </p>
-
-              <div className="service-arrow">
-                ↗
-              </div>
-            </article>
+                </div>
 
 
-            <article className="service-card">
-              <span>03</span>
+                {/* SERVICE CONTENT */}
 
-              <h3>
-                Landscape Maintenance
-              </h3>
+                <div className="service-card-content">
 
-              <p>
-                Reliable maintenance services to keep
-                outdoor spaces clean, healthy and attractive.
-              </p>
+                  <span>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
 
-              <div className="service-arrow">
-                ↗
-              </div>
-            </article>
+                  <h3>
+                    {service.title}
+                  </h3>
+
+                  <p>
+                    {service.shortDescription}
+                  </p>
 
 
-            <article className="service-card">
-              <span>04</span>
+                  {/* LEARN MORE */}
 
-              <h3>
-                Outdoor Landscaping
-              </h3>
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="service-learn-more"
+                  >
+                    Learn More
+                    <span>↗</span>
+                  </Link>
 
-              <p>
-                Transforming outdoor areas into practical
-                and welcoming spaces.
-              </p>
+                </div>
 
-              <div className="service-arrow">
-                ↗
-              </div>
-            </article>
+              </article>
+
+            ))}
 
           </div>
 
@@ -269,11 +293,17 @@ function App() {
           CONTACT
       ===================================================== */}
 
-      <section id="contact" className="contact-section">
+      <section
+        id="contact"
+        className="contact-section"
+      >
 
         <div className="page-container">
 
           <div className="contact-container">
+
+
+            {/* LEFT */}
 
             <div className="contact-left">
 
@@ -281,10 +311,12 @@ function App() {
                 CONTACT US
               </div>
 
-              <h2>
+              <h2  style={{ color: "white" }}>
                 Let's Create
                 <br />
-                <span>Something Green.</span>
+                <span>
+                  Something Green.
+                </span>
               </h2>
 
               <p>
@@ -293,45 +325,84 @@ function App() {
                 PLS Landscape & Engineering.
               </p>
 
+
+              {/* SOCIAL BUTTONS */}
+
               <div className="contact-buttons">
-  {/* WhatsApp */}
-  <a
-    href="https://wa.me/6590445110"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="contact-card contact-whatsapp"
-  >
-    <span className="social-icon whatsapp-icon">◔</span>
 
-    <span className="social-content">
-      <small>WhatsApp</small>
-      <strong>Chat with us →</strong>
-    </span>
-  </a>
 
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/plslandscape_singapore?stkn=MWo3aGE4czVyMXI4eA=="
-    target="_blank"
-    rel="noopener noreferrer"
-    className="contact-card contact-instagram"
-  >
-    <span className="social-icon instagram-icon">◎</span>
+                {/* WHATSAPP */}
 
-    <span className="social-content">
-      <small>Instagram</small>
-      <strong>@plslandscape_singapore →</strong>
-    </span>
-  </a>
-</div>
+                <a
+                  href="https://wa.me/6590445110"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-card contact-whatsapp"
+                >
+
+                  <span className="social-icon whatsapp-icon">
+                    ◔
+                  </span>
+
+                  <span className="social-content">
+
+                    <small>
+                      WhatsApp
+                    </small>
+
+                    <strong>
+                      Chat with us →
+                    </strong>
+
+                  </span>
+
+                </a>
+
+
+                {/* INSTAGRAM */}
+
+                <a
+                  href="https://www.instagram.com/plslandscape_singapore?stkn=MWo3aGE4czVyMXI4eA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-card contact-instagram"
+                >
+
+                  <span className="social-icon instagram-icon">
+                    ◎
+                  </span>
+
+                  <span className="social-content">
+
+                    <small>
+                      Instagram
+                    </small>
+
+                    <strong>
+                      @plslandscape_singapore →
+                    </strong>
+
+                  </span>
+
+                </a>
+
+              </div>
 
             </div>
 
 
+            {/* RIGHT */}
+
             <div className="contact-details">
 
+
+              {/* PHONE */}
+
               <div className="contact-item">
-                <span>PHONE</span>
+
+                <span>
+                  PHONE
+                </span>
 
                 <a href="tel:+6582609811">
                   +65 8260 9811
@@ -340,20 +411,32 @@ function App() {
                 <a href="tel:+6590445110">
                   +65 9044 5110
                 </a>
+
               </div>
 
 
+              {/* EMAIL */}
+
               <div className="contact-item">
-                <span>EMAIL</span>
+
+                <span>
+                  EMAIL
+                </span>
 
                 <a href="mailto:plsengineering2222@gmail.com">
                   plsengineering2222@gmail.com
                 </a>
+
               </div>
 
 
+              {/* ADDRESS */}
+
               <div className="contact-item">
-                <span>ADDRESS</span>
+
+                <span>
+                  ADDRESS
+                </span>
 
                 <p>
                   101 Kitchener Road,
@@ -362,17 +445,24 @@ function App() {
                   <br />
                   Singapore 208511
                 </p>
+
               </div>
 
 
+              {/* HOURS */}
+
               <div className="contact-item">
-                <span>OPENING HOURS</span>
+
+                <span>
+                  OPENING HOURS
+                </span>
 
                 <p>
                   Monday – Sunday
                   <br />
                   8:00 AM – 7:00 PM
                 </p>
+
               </div>
 
             </div>
@@ -382,7 +472,9 @@ function App() {
         </div>
 
 
-        {/* MAP */}
+        {/* =====================================================
+            MAP
+        ===================================================== */}
 
         <div className="map-container">
 
@@ -408,6 +500,9 @@ function App() {
 
           <div className="footer-content">
 
+
+            {/* LOGO */}
+
             <div className="footer-logo">
 
               <div className="footer-mark">
@@ -415,6 +510,7 @@ function App() {
               </div>
 
               <div>
+
                 <strong>
                   PLS Landscape
                 </strong>
@@ -422,16 +518,21 @@ function App() {
                 <small>
                   & Engineering
                 </small>
+
               </div>
 
             </div>
 
 
+            {/* COPYRIGHT */}
+
             <p>
-              © {new Date().getFullYear()} PLS Landscape & Engineering.
-              All rights reserved.
+              © {new Date().getFullYear()} PLS Landscape &
+              Engineering. All rights reserved.
             </p>
 
+
+            {/* WHATSAPP */}
 
             <a
               href="https://wa.me/6590445110"
@@ -440,7 +541,7 @@ function App() {
             >
               WhatsApp →
             </a>
-            
+
           </div>
 
         </div>
@@ -459,12 +560,49 @@ function App() {
         rel="noopener noreferrer"
         aria-label="Chat with PLS Landscape on WhatsApp"
       >
-        <span>WA</span>
+        <span>
+          WA
+        </span>
       </a>
 
     </div>
   );
 }
 
-export default App;
 
+/* =========================================================
+   MAIN APP / ROUTER
+========================================================= */
+
+function App() {
+
+  return (
+
+    <BrowserRouter>
+
+      <Routes>
+
+        {/* HOME */}
+
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
+
+
+        {/* SERVICE DETAILS */}
+
+        <Route
+          path="/services/:serviceId"
+          element={<ServiceDetails />}
+        />
+
+      </Routes>
+
+    </BrowserRouter>
+
+  );
+}
+
+
+export default App;
