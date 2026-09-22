@@ -164,7 +164,7 @@ const servicesData = [
       // "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1800&q=85",
       // "https://t3.ftcdn.net/jpg/09/63/81/76/240_F_963817630_dVG6WxGoelsCD24KHiFPTcLRAl9fcLBi.jpg",
       // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjuRfL10QtTwV-p07QpIcPgAJjFx_HMUPgXskU7Z583ZpQm_C2j9OtylhW&s=10", 
-      "/image/Gemini_Generated_Image_rph7rqrph7rqrph7.png",
+      "/image/Gemini_Generated_Image_rph7rqrph7rqrph7.webp",
 
 
     images: [
