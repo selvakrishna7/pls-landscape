@@ -7,12 +7,16 @@ const servicesData = [
       "Thoughtfully planned landscape designs that combine natural beauty, functionality and long-term outdoor usability.",
 
     heroImage:
-      "/image/dwarf-shrubs-land-morphology_11506.jpg",
+      "/image/Gemini_Generated_Image_8wnr4y8wnr4y8wnr.png",
+      // "https://blog.novatr.com/hs-fs/hubfs/Landscape%20designer%20designing%20a%20model%20for%20planning.jpg?width=770&height=431&name=Landscape%20designer%20designing%20a%20model%20for%20planning.jpg",
+      
+  
 
     images: [
-      "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=85",
+      "https://blog.novatr.com/hs-fs/hubfs/Landscape%20architects%20at%20work%20looking%20at%20design%20and%20real%20life%20project%20design.jpg?width=800&height=500&name=Landscape%20architects%20at%20work%20looking%20at%20design%20and%20real%20life%20project%20design.jpg",
+      "https://cdn.prod.website-files.com/63a02e61e7ffb565c30bcfc7/677e47f25466b01c629b535f_64a3d2da28c7258ea7fd9577_landscape%2520designer%2520four.jpeg",
+      // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIxQi4-Xf_mIq3kcruoZJZpvhhCfeoZKAiRmsH-IZtWZINkbdEL61-CYk&s=10",
+      "https://plus.unsplash.com/premium_photo-1664299228258-8890ef6dc22c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
 
     description:
@@ -42,12 +46,18 @@ const servicesData = [
       "Complete garden landscaping solutions designed to create attractive, practical and welcoming outdoor spaces.",
 
     heroImage:
-      "https://media.istockphoto.com/id/1347784849/photo/scenic-view-of-a-beautiful-landscape-garden-with-a-green-mowed-lawn.jpg?s=612x612&w=0&k=20&c=VU6cE_762lTNwqFeuc1A-JFksy6HcXM35Xq3ox3-Az0=",
+      // "https://media.istockphoto.com/id/1347784849/photo/scenic-view-of-a-beautiful-landscape-garden-with-a-green-mowed-lawn.jpg?s=612x612&w=0&k=20&c=VU6cE_762lTNwqFeuc1A-JFksy6HcXM35Xq3ox3-Az0=",
+      // "https://plus.unsplash.com/premium_photo-1661751889999-762ee67f68fa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/image/Gemini_Generated_Image_hjqz3yhjqz3yhjqz.png",
+
 
     images: [
-      "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=85",
+      // "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=85",
+      // "https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=1200&q=85",
+      // "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=85",
+      "https://plus.unsplash.com/premium_photo-1663016411225-7afa0e26bb58?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1664297258095-79b84ac333de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
+      "https://plus.unsplash.com/premium_photo-1664299231556-57f570023f87?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
 
     description:
@@ -77,12 +87,14 @@ const servicesData = [
       "Reliable landscape maintenance services to keep gardens, lawns and outdoor areas healthy, clean and well-presented.",
 
     heroImage:
-      "https://media.istockphoto.com/id/177391388/photo/mulching-around-the-bushes.jpg?s=612x612&w=0&k=20&c=iKfOvYRBosmiElzbM6rljqv8VJSEM1fVGbftpveIG8A=",
+      // "https://media.istockphoto.com/id/177391388/photo/mulching-around-the-bushes.jpg?s=612x612&w=0&k=20&c=iKfOvYRBosmiElzbM6rljqv8VJSEM1fVGbftpveIG8A=",
+      // "https://plus.unsplash.com/premium_photo-1682098326871-95eac6cf4f25?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/image/Gemini_Generated_Image_kqwn6lkqwn6lkqwn.png",
 
     images: [
-      "https://images.unsplash.com/photo-1599685315640-8c2d7f1f4f6e?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=1200&q=85",
+     "https://images.unsplash.com/photo-1734079692160-fcbe4be6ab96?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+     "https://images.unsplash.com/photo-1734303023491-db8037a21f09?q=80&w=1842&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+     "https://images.unsplash.com/photo-1668189777890-495c36095340?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
 
     description:
@@ -105,37 +117,39 @@ const servicesData = [
   },
 
   {
-    id: "minor-construction-services",
-    title: "Minor Construction Services",
+    id: "fish-pond-maintenance",
+    title: "Fish Pond Maintenance",
 
     shortDescription:
-      "Practical construction and installation solutions that enhance landscaped areas and improve outdoor functionality.",
+      "Professional fish pond maintenance services to keep ponds clean, healthy, well-balanced and visually attractive.",
 
     heroImage:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKZOK6qrzrFa1EBjhEvzst_YLM-cTHVeLYWbF0i5DS-aJgPxl0QRvWWwiD&s=10",
+      // "https://cdn.shopify.com/s/files/1/0672/1696/5932/files/how_to_clean_pond_water_with_fish_in_it.webp?v=1774606979",
+      // "https://nutrienwaterstore.com.au/cdn/shop/articles/Clean-Koi-Pond-1-1536x1028.jpg?v=1654750823",
+      "/image/Gemini_Generated_Image_ecnrg4ecnrg4ecnr.png",
 
     images: [
-      "https://images.unsplash.com/photo-1590644365607-1c5a7c2e0a2b?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=85",
+      "https://cdn.shopify.com/s/files/1/0672/1696/5932/files/weekly_debris_removal_and_pond_weed_control.webp?v=1786674701",
+      "https://cdn.shopify.com/s/files/1/0672/1696/5932/files/daily_pond_water_level_and_fish_check.webp?v=1786674701",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiW_i2pHD3XZUSWxAjct6DjQhh0DNgt82XaCi8L8qPzlLfu5iYniUZGhA&s=10",
     ],
 
     description:
-      "Our minor construction services provide practical solutions for outdoor structures and landscape-related construction requirements. These services complement our landscaping work by helping to create functional pathways, garden structures, water features and other outdoor elements. We focus on delivering solutions that are suitable for the surrounding landscape while considering durability, usability and overall appearance. From pergolas and trellises to pathways, walkways and paving works, our team can support a range of landscape improvement and construction requirements.",
+      "Our fish pond maintenance services are designed to keep ponds clean, healthy and properly maintained throughout the year. Regular pond care is important for maintaining water quality, supporting fish health and keeping the surrounding area neat and attractive. Our services can include pond cleaning, debris removal, water quality management, algae control and general pond upkeep. We assess the condition of each pond and provide practical maintenance solutions based on its size, water features, fish population and surrounding landscape.",
 
     features: [
-      "Trellis and pergola construction",
-      "Pond construction and maintenance",
-      "Gravel pathway installation",
-      "Concrete pathway construction",
-      "GFRC (Glass Fiber Reinforced Concrete) works",
-      "Wooden walkway construction",
-      "Interlocking paver installation",
-      "Car park and driveway paving",
-      "Outdoor structure installation",
-      "Landscape feature construction",
-      "Garden hardscape improvements",
-      "Landscape-related construction works",
+      "Regular fish pond maintenance",
+      "Pond cleaning and debris removal",
+      "Water quality monitoring",
+      "Algae and unwanted growth control",
+      "Pond filter and pump maintenance",
+      "Water circulation system maintenance",
+      "Fish pond water management",
+      "Pond surface cleaning",
+      "Aquatic plant maintenance",
+      "Fish-friendly pond care",
+      "Pond area cleaning and upkeep",
+      "Scheduled pond maintenance programs",
     ],
   },
 
@@ -147,12 +161,18 @@ const servicesData = [
       "Professional tree-care services focused on maintaining healthy, safe and sustainable trees and green spaces.",
 
     heroImage:
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1800&q=85",
+      // "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1800&q=85",
+      // "https://t3.ftcdn.net/jpg/09/63/81/76/240_F_963817630_dVG6WxGoelsCD24KHiFPTcLRAl9fcLBi.jpg",
+      // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjuRfL10QtTwV-p07QpIcPgAJjFx_HMUPgXskU7Z583ZpQm_C2j9OtylhW&s=10", 
+      "/image/Gemini_Generated_Image_rph7rqrph7rqrph7.png",
+
 
     images: [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1523742819230-50e8c7d8c0f1?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=85",
+      // "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=85",
+      // "https://images.unsplash.com/photo-1523742819230-50e8c7d8c0f1?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1617576683096-00fc8eecb3af?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1754321871548-61bdbc6f1506?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1661963981959-76c59c589ba4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
 
     description:

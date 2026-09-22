@@ -1442,9 +1442,9 @@ img {
   background:
     linear-gradient(
       90deg,
-      rgba(9, 23, 13, 0.92) 0%,
+      /* rgba(9, 23, 13, 0.92) 0%,
       rgba(9, 23, 13, 0.65) 48%,
-      rgba(9, 23, 13, 0.20) 100%
+      rgba(9, 23, 13, 0.20) 100% */
     );
 
   pointer-events: none;

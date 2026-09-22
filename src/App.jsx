@@ -151,8 +151,7 @@ function HomePage() {
 
             <div className="about-content">
 
-              <span className="about-number">
-                01
+              <span className="about-number"> 
               </span>
 
               <div className="about-content-inner">
