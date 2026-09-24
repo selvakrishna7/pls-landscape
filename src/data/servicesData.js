@@ -50,7 +50,7 @@ const servicesData = [
     heroImage:
       // "https://media.istockphoto.com/id/1347784849/photo/scenic-view-of-a-beautiful-landscape-garden-with-a-green-mowed-lawn.jpg?s=612x612&w=0&k=20&c=VU6cE_762lTNwqFeuc1A-JFksy6HcXM35Xq3ox3-Az0=",
       // "https://plus.unsplash.com/premium_photo-1661751889999-762ee67f68fa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "/image/Gemini_Generated_Image_hjqz3yhjqz3yhjqz.png",
+      "/image/Gemini_Generated_Image_yqrkp1yqrkp1yqrk.png",
 
 
     images: [
@@ -161,10 +161,7 @@ const servicesData = [
       "Professional tree-care services focused on maintaining healthy, safe and sustainable trees and green spaces.",
 
     heroImage:
-      // "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1800&q=85",
-      // "https://t3.ftcdn.net/jpg/09/63/81/76/240_F_963817630_dVG6WxGoelsCD24KHiFPTcLRAl9fcLBi.jpg",
-      // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjuRfL10QtTwV-p07QpIcPgAJjFx_HMUPgXskU7Z583ZpQm_C2j9OtylhW&s=10", 
-      "/image/Gemini_Generated_Image_rph7rqrph7rqrph7.webp",
+      "/image/Gemini_Generated_Image_47vxq847vxq847vx.png",
 
 
     images: [
