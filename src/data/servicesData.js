@@ -7,7 +7,7 @@ const servicesData = [
       "Thoughtfully planned landscape designs that combine natural beauty, functionality and long-term outdoor usability.",
 
     heroImage:
-      "/image/Gemini_Generated_Image_8wnr4y8wnr4y8wnr.png",
+      "/image/ChatGPT Image Sep 24, 2026, 10_19_46 PM.png",
       // "https://blog.novatr.com/hs-fs/hubfs/Landscape%20designer%20designing%20a%20model%20for%20planning.jpg?width=770&height=431&name=Landscape%20designer%20designing%20a%20model%20for%20planning.jpg",
       
   
@@ -16,7 +16,8 @@ const servicesData = [
       "https://blog.novatr.com/hs-fs/hubfs/Landscape%20architects%20at%20work%20looking%20at%20design%20and%20real%20life%20project%20design.jpg?width=800&height=500&name=Landscape%20architects%20at%20work%20looking%20at%20design%20and%20real%20life%20project%20design.jpg",
       "https://cdn.prod.website-files.com/63a02e61e7ffb565c30bcfc7/677e47f25466b01c629b535f_64a3d2da28c7258ea7fd9577_landscape%2520designer%2520four.jpeg",
       // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIxQi4-Xf_mIq3kcruoZJZpvhhCfeoZKAiRmsH-IZtWZINkbdEL61-CYk&s=10",
-      "https://plus.unsplash.com/premium_photo-1664299228258-8890ef6dc22c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      // "https://plus.unsplash.com/premium_photo-1664299228258-8890ef6dc22c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "/image/WhatsApp Image 2026-09-24 at 9.11.06 PM.jpeg"
     ],
 
     description:
@@ -127,6 +128,7 @@ const servicesData = [
       // "https://cdn.shopify.com/s/files/1/0672/1696/5932/files/how_to_clean_pond_water_with_fish_in_it.webp?v=1774606979",
       // "https://nutrienwaterstore.com.au/cdn/shop/articles/Clean-Koi-Pond-1-1536x1028.jpg?v=1654750823",
       "/image/Gemini_Generated_Image_ecnrg4ecnrg4ecnr.png",
+      
 
     images: [
       "https://cdn.shopify.com/s/files/1/0672/1696/5932/files/weekly_debris_removal_and_pond_weed_control.webp?v=1786674701",
@@ -168,11 +170,10 @@ const servicesData = [
 
 
     images: [
-      // "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=85",
-      // "https://images.unsplash.com/photo-1523742819230-50e8c7d8c0f1?auto=format&fit=crop&w=1200&q=85",
-      "https://images.unsplash.com/photo-1617576683096-00fc8eecb3af?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1754321871548-61bdbc6f1506?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://plus.unsplash.com/premium_photo-1661963981959-76c59c589ba4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "https://www.princelandscape.com/wp-content/uploads/2016/03/Logan-Tree-Transplanting-01-1-scaled.jpg",
+      // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdyiSeu5WxBb2Ml4OY4unTWSILwzqoQi8BMFNwH3aD_LAu1sX7l-DdLyk&s=10",
+      "https://www.kenlandscape.com.sg/uploads/img/d9aa686458c7b4ba321402418855863e.JPG",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOAtdwI31uw692pFrK9Z2dsuSiJFYtHrClJwQF7D-EoB_FXhz4-cIybzk&s=10"
     ],
 
     description:

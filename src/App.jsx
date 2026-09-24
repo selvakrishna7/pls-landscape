@@ -10,7 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import aboutImage from "./image/Gemini_Generated_Image_ifdun3ifdun3ifdu.png";
+import aboutImage from "./image/ChatGPT Image Sep 24, 2026, 10_07_50 PM.png";
 import heroImage from "./image/vecteezy_man-in-a-blue-polo-shirt-mowing-the-green-lawn-with-a-red_85160393.jpg";
 
 import { Link } from "react-router-dom";
