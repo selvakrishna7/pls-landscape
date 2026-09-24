@@ -17,7 +17,8 @@ const servicesData = [
       "https://cdn.prod.website-files.com/63a02e61e7ffb565c30bcfc7/677e47f25466b01c629b535f_64a3d2da28c7258ea7fd9577_landscape%2520designer%2520four.jpeg",
       // "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIxQi4-Xf_mIq3kcruoZJZpvhhCfeoZKAiRmsH-IZtWZINkbdEL61-CYk&s=10",
       // "https://plus.unsplash.com/premium_photo-1664299228258-8890ef6dc22c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      "/image/WhatsApp Image 2026-09-24 at 9.11.06 PM.jpeg"
+      // "/image/WhatsApp Image 2026-09-24 at 9.11.06 PM.jpeg"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAB4OsuFf5Mb2V6B3W4kwmzKXH1w_a8vh219BFFYvaWMU22Kk3Gi5soOI&s=10"
     ],
 
     description:
