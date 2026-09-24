@@ -54,12 +54,9 @@ const servicesData = [
 
 
     images: [
-      // "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=85",
-      // "https://images.unsplash.com/photo-1558521958-0a228e77e984?auto=format&fit=crop&w=1200&q=85",
-      // "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=85",
-      "https://plus.unsplash.com/premium_photo-1663016411225-7afa0e26bb58?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://plus.unsplash.com/premium_photo-1664297258095-79b84ac333de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
-      "https://plus.unsplash.com/premium_photo-1664299231556-57f570023f87?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEoP5CoeCSFZubrUQHvHl9UMk12TlAVrGK8CyuAPe_yeSlbDu6QcELwL0&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVaEbgWbAjsIJ_0yure5dDHZ7UpMt9D4LP560e7cPIb2oARkOCoRPlkpCT&s=10",
+      "https://www.helpling.com.sg/wp-content/uploads/2023/06/Helpling-gardening_bg.webp",
     ],
 
     description:
