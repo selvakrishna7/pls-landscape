@@ -3555,61 +3555,64 @@ a:focus-visible {
   /* -----------------------------------------
      Mobile Images
   ----------------------------------------- */
+  /* -----------------------------------------
+   Mobile Images
+----------------------------------------- */
 
-  .live-gallery-track img {
+.live-gallery-track img {
 
-    display: block;
+  display: block;
 
-    /*
-      IMPORTANT:
-      100% of gallery width.
-    */
+  width: 100%;
 
-    width: 100%;
+  min-width: 100%;
 
-    min-width: 100%;
+  max-width: 100%;
 
-    max-width: 100%;
+  height: 100%;
 
-    height: 400px;
+  flex: 0 0 100%;
 
-    /*
-      Exactly one slide.
-    */
+  margin: 0;
 
-    flex: 0 0 100%;
+  padding: 0;
 
-    margin: 0;
-    padding: 0;
+  /*
+    IMPORTANT:
+    Show the complete image on mobile.
+    Prevent BEFORE / AFTER text from being cropped.
+  */
 
-    object-fit: cover;
+  object-fit: contain;
 
-    object-position: center;
+  object-position: center;
 
-    /*
-      iOS GPU rendering.
-    */
+  background: #dfe5df;
 
-    transform: translateZ(0);
+  /*
+    Disable interaction
+  */
 
-    -webkit-transform: translateZ(0);
+  pointer-events: none;
 
-    backface-visibility: hidden;
+  user-select: none;
 
-    -webkit-backface-visibility: hidden;
+  -webkit-user-select: none;
 
-    /*
-      Disable interaction.
-    */
+  -webkit-user-drag: none;
 
-    pointer-events: none;
+  /*
+    iOS GPU
+  */
 
-    user-select: none;
+  transform: translateZ(0);
 
-    -webkit-user-select: none;
+  -webkit-transform: translateZ(0);
 
-    -webkit-user-drag: none;
-  }
+  backface-visibility: hidden;
+
+  -webkit-backface-visibility: hidden;
+}
 
 
   /* -----------------------------------------
