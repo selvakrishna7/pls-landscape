@@ -2987,3 +2987,760 @@ a:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* =========================================================
+   PREMIUM ONE-BY-ONE GALLERY
+   PLS LANDSCAPE & ENGINEERING
+   AUTO SLIDE VERSION
+   iPhone Safari + Chrome Compatible
+========================================================= */
+
+.service-live-gallery {
+  position: relative;
+  width: 100%;
+  margin-top: 140px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   GALLERY HEADER
+========================================================= */
+
+.service-live-gallery .section-label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 22px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: #315c3a;
+}
+
+
+.service-live-gallery .section-label::before {
+  content: "";
+
+  display: block;
+
+  width: 36px;
+  height: 1px;
+
+  background: #315c3a;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.service-live-gallery h2 {
+  margin: 0 0 55px;
+
+  max-width: 700px;
+
+  font-size: clamp(42px, 5vw, 76px);
+
+  line-height: 0.98;
+
+  font-weight: 500;
+
+  letter-spacing: -0.045em;
+
+  color: #17231a;
+}
+
+
+/* =========================================================
+   GALLERY FRAME
+========================================================= */
+
+.live-gallery-window {
+  position: relative;
+
+  width: 100%;
+
+  height: min(70vh, 680px);
+
+  min-height: 460px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: #dfe5df;
+
+  box-shadow:
+    0 30px 80px rgba(20, 40, 25, 0.14);
+
+  /* Safari / iOS GPU rendering */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  /* Prevent horizontal browser scrolling */
+  overscroll-behavior-x: none;
+
+  /*
+    IMPORTANT:
+    Slider is controlled by JavaScript.
+  */
+
+  touch-action: pan-y;
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+
+/* =========================================================
+   IMAGE TRACK
+========================================================= */
+
+.live-gallery-track {
+  display: flex;
+
+  flex-wrap: nowrap;
+
+  /*
+    IMPORTANT:
+    Track contains all slides.
+  */
+
+  width: 100%;
+
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  /*
+    JavaScript changes this value.
+  */
+
+  transform: translate3d(0, 0, 0);
+
+  -webkit-transform: translate3d(0, 0, 0);
+
+  /*
+    Smooth one-image transition
+  */
+
+  transition:
+    transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+
+  -webkit-transition:
+    -webkit-transform 0.8s cubic-bezier(
+      0.65,
+      0,
+      0.35,
+      1
+    );
+
+  will-change: transform;
+
+  /*
+    Safari rendering
+  */
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /*
+    Prevent selection
+  */
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Prevent accidental touch scrolling
+    on the track itself.
+  */
+
+  touch-action: none;
+}
+
+
+/* =========================================================
+   EACH GALLERY IMAGE
+   ONE IMAGE = ONE FULL GALLERY WIDTH
+========================================================= */
+
+.live-gallery-track img {
+  display: block;
+
+  /*
+    IMPORTANT:
+    Use 100% instead of 100vw.
+
+    This makes every image exactly the
+    width of the gallery window.
+  */
+
+  width: 100%;
+
+  min-width: 100%;
+
+  max-width: 100%;
+
+  height: 100%;
+
+  /*
+    One slide at a time.
+  */
+
+  flex: 0 0 100%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  /*
+    Disable interaction.
+  */
+
+  pointer-events: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-user-drag: none;
+
+  /*
+    Safari / iPhone GPU rendering.
+  */
+
+  transform: translateZ(0);
+
+  -webkit-transform: translateZ(0);
+
+  backface-visibility: hidden;
+
+  -webkit-backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   DARK GREEN OVERLAY
+========================================================= */
+
+.live-gallery-window::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 3;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 24, 13, 0.28) 0%,
+      rgba(7, 24, 13, 0.04) 45%,
+      rgba(7, 24, 13, 0.18) 100%
+    );
+}
+
+
+/* =========================================================
+   TOP FADE
+========================================================= */
+
+.live-gallery-window::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 4;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 90px;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.16),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   GALLERY LABEL
+========================================================= */
+
+.live-gallery-window .gallery-overlay-label {
+  position: absolute;
+
+  z-index: 6;
+
+  left: 32px;
+  bottom: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.35);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .live-gallery-window:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 40px 100px rgba(20, 40, 25, 0.19);
+  }
+
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .service-live-gallery {
+    margin-top: 110px;
+  }
+
+  .live-gallery-window {
+    height: 580px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .service-live-gallery {
+    margin-top: 90px;
+  }
+
+  .service-live-gallery h2 {
+    margin-bottom: 40px;
+
+    font-size: clamp(
+      40px,
+      7vw,
+      60px
+    );
+  }
+
+  .live-gallery-window {
+    height: 500px;
+
+    min-height: 400px;
+
+    border-radius: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE / iPHONE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .service-live-gallery {
+    width: 100%;
+
+    margin-top: 80px;
+
+    padding: 10px 0;
+  }
+
+
+  /* -----------------------------------------
+     Section Label
+  ----------------------------------------- */
+
+  .service-live-gallery .section-label {
+    margin-bottom: 16px;
+
+    padding: 0 16px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.15em;
+  }
+
+
+  .service-live-gallery .section-label::before {
+    width: 28px;
+  }
+
+
+  /* -----------------------------------------
+     Title
+  ----------------------------------------- */
+
+  .service-live-gallery h2 {
+    margin-bottom: 30px;
+
+    padding: 0 16px;
+
+    max-width: 330px;
+
+    font-size: clamp(
+      38px,
+      11vw,
+      52px
+    );
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+  }
+
+
+  /* -----------------------------------------
+     iPhone Gallery Frame
+  ----------------------------------------- */
+
+  .live-gallery-window {
+
+    width: 100%;
+
+    height: 400px;
+
+    min-height: 0;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: #dfe5df;
+
+    box-shadow:
+      0 20px 50px rgba(20, 40, 25, 0.14);
+
+    /*
+      Safari GPU layer
+    */
+
+    transform: translateZ(0);
+
+    -webkit-transform: translateZ(0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    /*
+      Allow vertical page scrolling.
+    */
+
+    touch-action: pan-y;
+
+    overscroll-behavior-x: none;
+  }
+
+
+  /* -----------------------------------------
+     Mobile Track
+  ----------------------------------------- */
+
+  .live-gallery-track {
+
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    /*
+      All slides together.
+    */
+
+    width: 100%;
+
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    /*
+      JavaScript controls transform.
+    */
+
+    will-change: transform;
+
+    transform: translate3d(0, 0, 0);
+
+    -webkit-transform: translate3d(0, 0, 0);
+
+    /*
+      Smooth slide.
+    */
+
+    transition:
+      transform 0.8s cubic-bezier(
+        0.65,
+        0,
+        0.35,
+        1
+      );
+
+    -webkit-transition:
+      -webkit-transform 0.8s cubic-bezier(
+        0.65,
+        0,
+        0.35,
+        1
+      );
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    touch-action: none;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+  }
+
+
+  /* -----------------------------------------
+     Mobile Images
+  ----------------------------------------- */
+
+  .live-gallery-track img {
+
+    display: block;
+
+    /*
+      IMPORTANT:
+      100% of gallery width.
+    */
+
+    width: 100%;
+
+    min-width: 100%;
+
+    max-width: 100%;
+
+    height: 400px;
+
+    /*
+      Exactly one slide.
+    */
+
+    flex: 0 0 100%;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    /*
+      iOS GPU rendering.
+    */
+
+    transform: translateZ(0);
+
+    -webkit-transform: translateZ(0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    /*
+      Disable interaction.
+    */
+
+    pointer-events: none;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+    -webkit-user-drag: none;
+  }
+
+
+  /* -----------------------------------------
+     Mobile Label
+  ----------------------------------------- */
+
+  .live-gallery-window .gallery-overlay-label {
+
+    left: 20px;
+
+    bottom: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.14em;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .service-live-gallery {
+    margin-top: 65px;
+  }
+
+
+  .service-live-gallery h2 {
+    font-size: 36px;
+  }
+
+
+  .live-gallery-window {
+
+    height: 330px;
+
+    border-radius: 15px;
+  }
+
+
+  .live-gallery-track img {
+
+    height: 330px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL iPHONE
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .live-gallery-window {
+    height: 300px;
+  }
+
+
+  .live-gallery-track img {
+    height: 300px;
+  }
+
+}
+
+
+/* =========================================================
+   SAFARI / iOS
+========================================================= */
+
+@supports (-webkit-touch-callout: none) {
+
+  .live-gallery-window {
+
+    -webkit-transform: translateZ(0);
+
+    transform: translateZ(0);
+
+    -webkit-backface-visibility: hidden;
+
+    backface-visibility: hidden;
+
+    overflow: hidden;
+  }
+
+
+  .live-gallery-track {
+
+    -webkit-transform: translate3d(
+      0,
+      0,
+      0
+    );
+
+    transform: translate3d(
+      0,
+      0,
+      0
+    );
+
+    -webkit-backface-visibility: hidden;
+
+    backface-visibility: hidden;
+
+    /*
+      React controls movement.
+    */
+
+    -webkit-animation: none !important;
+
+    animation: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .live-gallery-track {
+
+    transition: none !important;
+
+    -webkit-transition: none !important;
+  }
+
+}

@@ -1,11 +1,20 @@
 import { Link, useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import servicesData from "../data/servicesData";
 
 function ServiceDetails() {
   const { serviceId } = useParams();
 
-  // Always open the service page from the top
+  // =====================================================
+  // GALLERY TRACK REF
+  // =====================================================
+
+  const galleryTrackRef = useRef(null);
+
+  // =====================================================
+  // ALWAYS OPEN SERVICE PAGE FROM TOP
+  // =====================================================
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -14,9 +23,17 @@ function ServiceDetails() {
     });
   }, [serviceId]);
 
+  // =====================================================
+  // FIND SERVICE
+  // =====================================================
+
   const service = servicesData.find(
     (item) => item.id === serviceId
   );
+
+  // =====================================================
+  // SERVICE NOT FOUND
+  // =====================================================
 
   if (!service) {
     return (
@@ -30,6 +47,179 @@ function ServiceDetails() {
     );
   }
 
+  // =====================================================
+  // ONE-BY-ONE AUTO GALLERY
+  // iPHONE / SAFARI SAFE
+  // =====================================================
+
+  useEffect(() => {
+    const track = galleryTrackRef.current;
+
+    if (!track) return;
+
+    const galleryImages = service.galleryImages || [];
+
+    if (galleryImages.length <= 1) return;
+
+    let currentIndex = 0;
+    let interval = null;
+
+    // ===================================================
+    // SHOW CURRENT IMAGE
+    // ===================================================
+
+    const updateSlide = (animated = true) => {
+      const galleryWindow = track.parentElement;
+
+      if (!galleryWindow) return;
+
+      const slideWidth = galleryWindow.offsetWidth;
+
+      track.style.transition = animated
+        ? "transform 0.8s cubic-bezier(0.65, 0, 0.35, 1)"
+        : "none";
+
+      track.style.webkitTransition = animated
+        ? "-webkit-transform 0.8s cubic-bezier(0.65, 0, 0.35, 1)"
+        : "none";
+
+      const translateX = currentIndex * slideWidth;
+
+      track.style.transform =
+        `translate3d(-${translateX}px, 0, 0)`;
+
+      track.style.webkitTransform =
+        `translate3d(-${translateX}px, 0, 0)`;
+    };
+
+    // ===================================================
+    // NEXT IMAGE
+    // ===================================================
+
+    const showNextImage = () => {
+      currentIndex++;
+
+      if (currentIndex >= galleryImages.length) {
+        currentIndex = 0;
+      }
+
+      updateSlide(true);
+    };
+
+    // ===================================================
+    // START AUTO SLIDER
+    // ===================================================
+
+    const startSlider = () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+
+      interval = setInterval(() => {
+        showNextImage();
+      }, 3500);
+    };
+
+    // ===================================================
+    // STOP SLIDER
+    // ===================================================
+
+    const stopSlider = () => {
+      if (interval) {
+        clearInterval(interval);
+        interval = null;
+      }
+    };
+
+    // ===================================================
+    // RESIZE
+    // ===================================================
+
+    const handleResize = () => {
+      updateSlide(false);
+
+      requestAnimationFrame(() => {
+        track.style.transition =
+          "transform 0.8s cubic-bezier(0.65, 0, 0.35, 1)";
+
+        track.style.webkitTransition =
+          "-webkit-transform 0.8s cubic-bezier(0.65, 0, 0.35, 1)";
+      });
+    };
+
+    // ===================================================
+    // TAB VISIBILITY
+    // ===================================================
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopSlider();
+      } else {
+        startSlider();
+      }
+    };
+
+    // ===================================================
+    // INITIAL POSITION
+    // ===================================================
+
+    currentIndex = 0;
+
+    updateSlide(false);
+
+    // ===================================================
+    // START
+    // ===================================================
+
+    startSlider();
+
+    // ===================================================
+    // EVENTS
+    // ===================================================
+
+    document.addEventListener(
+      "visibilitychange",
+      handleVisibilityChange
+    );
+
+    window.addEventListener(
+      "resize",
+      handleResize
+    );
+
+    window.addEventListener(
+      "orientationchange",
+      handleResize
+    );
+
+    // ===================================================
+    // CLEANUP
+    // ===================================================
+
+    return () => {
+      stopSlider();
+
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibilityChange
+      );
+
+      window.removeEventListener(
+        "resize",
+        handleResize
+      );
+
+      window.removeEventListener(
+        "orientationchange",
+        handleResize
+      );
+    };
+  }, [serviceId, service.galleryImages]);
+
+  // =====================================================
+  // RETURN
+  // =====================================================
+
   return (
     <div className="service-details-page">
 
@@ -40,22 +230,30 @@ function ServiceDetails() {
       <header className="service-details-nav">
 
         {/* BACK */}
+
         <Link
           to="/"
           className="service-back"
         >
-          <span className="back-arrow">←</span>
-          <span>Back to Website</span>
+          <span className="back-arrow">
+            ←
+          </span>
+
+          <span>
+            Back to Website
+          </span>
         </Link>
 
 
         {/* BUSINESS NAME */}
+
         <strong className="service-nav-title">
           PLS Landscape
         </strong>
 
 
         {/* GET QUOTE */}
+
         <a
           href="https://wa.me/6590445110"
           target="_blank"
@@ -183,7 +381,8 @@ function ServiceDetails() {
 
 
           {/* =================================================
-              GALLERY
+              OUR WORK
+              OLD GALLERY
           ================================================= */}
 
           <section className="service-gallery">
@@ -197,6 +396,7 @@ function ServiceDetails() {
               <br />
               that feel alive.
             </h2>
+
 
             <div className="service-gallery-grid">
 
@@ -226,6 +426,60 @@ function ServiceDetails() {
 
 
           {/* =================================================
+              NEW ONE-BY-ONE GALLERY
+          ================================================= */}
+
+          <section className="service-live-gallery">
+
+            <div className="section-label">
+              GALLERY
+            </div>
+
+            <h2>
+              A closer look
+              <br />
+              at our work.
+            </h2>
+
+
+            <div className="live-gallery-window">
+
+              <div
+                className="live-gallery-track"
+                ref={galleryTrackRef}
+              >
+
+                {service.galleryImages?.map(
+                  (image, index) => (
+                    <img
+                      key={`gallery-${index}`}
+                      src={image}
+                      alt={`${service.title} gallery ${index + 1}`}
+                      loading={
+                        index === 0
+                          ? "eager"
+                          : "lazy"
+                      }
+                      draggable="false"
+                    />
+                  )
+                )}
+
+              </div>
+
+
+              {/* GALLERY LABEL */}
+
+              <div className="gallery-overlay-label">
+                PLS LANDSCAPE & ENGINEERING
+              </div>
+
+            </div>
+
+          </section>
+
+
+          {/* =================================================
               CTA
           ================================================= */}
 
@@ -244,6 +498,7 @@ function ServiceDetails() {
               </h2>
 
             </div>
+
 
             <a
               href={`https://wa.me/6590445110?text=${encodeURIComponent(
