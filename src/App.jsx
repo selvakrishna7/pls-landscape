@@ -44,7 +44,7 @@ function HomePage() {
           <div className="hero-content">
 
             <p className="hero-tag">
-              LANDSCAPE & ENGINEERING
+              LANDSCAPING & ENGINEERING SERVICES IN SINGAPORE
             </p>
 
             <h1>
@@ -54,8 +54,9 @@ function HomePage() {
             </h1>
 
             <p className="hero-text">
-              Professional landscaping and engineering solutions
-              for residential and commercial properties in Singapore.
+              Professional landscaping, landscape design and
+              outdoor solutions for residential and commercial
+              properties across Singapore.
             </p>
 
             <div className="hero-buttons">
@@ -99,7 +100,7 @@ function HomePage() {
           <div className="about-heading">
 
             <div className="section-label">
-              ABOUT PLS
+              ABOUT PLS LANDSCAPE & ENGINEERING
             </div>
 
             <div className="about-intro">
@@ -113,7 +114,8 @@ function HomePage() {
               </h2>
 
               <p>
-                PLS Landscape & Engineering creates thoughtful
+                PLS Landscape & Engineering provides professional
+                landscaping services in Singapore, creating thoughtful
                 outdoor environments that combine natural beauty,
                 practical design and reliable workmanship.
               </p>
@@ -129,7 +131,7 @@ function HomePage() {
 
               <img
                 src={aboutImage}
-                alt="PLS Landscape and Engineering"
+                alt="PLS Landscape & Engineering professional landscaping services in Singapore"
               />
 
               <div className="about-image-label">
@@ -151,7 +153,7 @@ function HomePage() {
 
             <div className="about-content">
 
-              <span className="about-number"> 
+              <span className="about-number">
               </span>
 
               <div className="about-content-inner">
@@ -164,14 +166,16 @@ function HomePage() {
 
                 <p>
                   From residential gardens to commercial outdoor
-                  spaces, we develop landscaping solutions that
-                  are both visually appealing and functional.
+                  spaces, we develop professional landscaping
+                  solutions across Singapore that are both
+                  visually appealing and functional.
                 </p>
 
                 <p>
-                  Our approach combines careful planning, quality
-                  workmanship and attention to detail to create
-                  outdoor spaces that complement each property.
+                  Our approach combines careful planning, landscape
+                  design, quality workmanship and attention to detail
+                  to create outdoor spaces that complement homes,
+                  businesses and commercial properties.
                 </p>
 
                 <a
@@ -209,7 +213,7 @@ function HomePage() {
             <div>
 
               <div className="section-label">
-                OUR SERVICES
+                LANDSCAPING SERVICES IN SINGAPORE
               </div>
 
               <h2>
@@ -219,8 +223,10 @@ function HomePage() {
             </div>
 
             <p>
-              Professional solutions designed around your
-              landscaping, outdoor space and engineering requirements.
+              Professional landscaping solutions for residential
+              and commercial properties, including landscape design,
+              garden maintenance, arboriculture and outdoor
+              landscape services across Singapore.
             </p>
 
           </div>
@@ -241,7 +247,7 @@ function HomePage() {
 
                   <img
                     src={service.heroImage}
-                    alt={service.title}
+                    alt={`${service.title} in Singapore - PLS Landscape & Engineering`}
                     loading="lazy"
                   />
 
@@ -270,6 +276,7 @@ function HomePage() {
                   <Link
                     to={`/services/${service.id}`}
                     className="service-learn-more"
+                    aria-label={`Learn more about ${service.title} in Singapore`}
                   >
                     Learn More
                     <span>↗</span>
@@ -307,10 +314,10 @@ function HomePage() {
             <div className="contact-left">
 
               <div className="section-label">
-                CONTACT US
+                CONTACT PLS LANDSCAPE & ENGINEERING
               </div>
 
-              <h2  style={{ color: "white" }}>
+              <h2 style={{ color: "white" }}>
                 Let's Create
                 <br />
                 <span>
@@ -319,9 +326,11 @@ function HomePage() {
               </h2>
 
               <p>
-                Looking for professional landscaping or engineering
-                solutions in Singapore? Get in touch with
-                PLS Landscape & Engineering.
+                Looking for professional landscaping services
+                in Singapore? Get in touch with PLS Landscape &
+                Engineering for landscape design, garden
+                maintenance, arboriculture and outdoor
+                landscaping solutions.
               </p>
 
 
@@ -478,7 +487,7 @@ function HomePage() {
         <div className="map-container">
 
           <iframe
-            title="PLS Landscape and Engineering Location"
+            title="PLS Landscape & Engineering landscaping services in Singapore"
             src="https://www.google.com/maps?q=101%20Kitchener%20Road%20Singapore%20208511&output=embed"
             loading="lazy"
             allowFullScreen
@@ -527,7 +536,8 @@ function HomePage() {
 
             <p>
               © {new Date().getFullYear()} PLS Landscape &
-              Engineering. All rights reserved.
+              Engineering. Professional Landscaping Services
+              in Singapore. All rights reserved.
             </p>
 
 
@@ -537,6 +547,7 @@ function HomePage() {
               href="https://wa.me/6590445110"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Contact PLS Landscape & Engineering on WhatsApp"
             >
               WhatsApp →
             </a>
@@ -557,7 +568,7 @@ function HomePage() {
         href="https://wa.me/6590445110"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with PLS Landscape on WhatsApp"
+        aria-label="Chat with PLS Landscape & Engineering on WhatsApp"
       >
         <span>
           WA
@@ -605,3 +616,4 @@ function App() {
 
 
 export default App;
+
