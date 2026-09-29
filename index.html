@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en-SG">
 
@@ -6,18 +7,28 @@
   <meta charset="UTF-8" />
 
   <!-- =====================================================
-       BASIC / FAVICON
+       BASIC / FAVICON / LOGO
   ====================================================== -->
 
+  <!-- Browser favicon -->
   <link
     rel="icon"
     type="image/svg+xml"
     href="/favicon.svg"
   />
 
+  <!-- PNG favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="512x512"
+    href="/pls-logo.png"
+  />
+
+  <!-- Apple / mobile icon -->
   <link
     rel="apple-touch-icon"
-    href="/favicon.svg"
+    href="/pls-logo.png"
   />
 
   <meta
@@ -36,17 +47,17 @@
 
   <meta
     name="description"
-    content="PLS Landscape & Engineering provides professional landscaping services in Singapore, including landscape design, garden maintenance, commercial landscaping, residential landscaping, arboriculture, tree care and fish pond maintenance."
+    content="PLS Landscape & Engineering Pte. Ltd. is a landscaping company in Singapore providing professional landscape design, garden installation, landscape maintenance, arboriculture, tree care, fish pond maintenance and landscape engineering services."
   />
 
   <meta
     name="author"
-    content="PLS Landscape & Engineering"
+    content="PLS Landscape & Engineering Pte. Ltd."
   />
 
   <meta
     name="publisher"
-    content="PLS Landscape & Engineering"
+    content="PLS Landscape & Engineering Pte. Ltd."
   />
 
   <meta
@@ -65,7 +76,6 @@
   />
 
   <!-- Canonical -->
-
   <link
     rel="canonical"
     href="https://plslandscapeengineering.com/"
@@ -118,7 +128,7 @@
 
   <meta
     property="og:description"
-    content="Professional landscaping services in Singapore for residential and commercial properties, including landscape design, garden maintenance, arboriculture, tree care and outdoor solutions."
+    content="PLS Landscape & Engineering Pte. Ltd. provides professional landscaping services in Singapore, including landscape design, garden installation, maintenance, arboriculture, tree care, fish pond maintenance and landscape engineering."
   />
 
   <meta
@@ -163,7 +173,7 @@
 
   <meta
     name="twitter:description"
-    content="Professional landscaping, landscape design, garden maintenance, commercial landscaping, residential landscaping and arboriculture services in Singapore."
+    content="Professional landscaping, landscape design, garden installation, maintenance, arboriculture, tree care and landscape engineering services in Singapore."
   />
 
   <meta
@@ -188,26 +198,38 @@
 
 
   <!-- =====================================================
-       LOCAL BUSINESS STRUCTURED DATA
+       ORGANIZATION / LOCAL BUSINESS STRUCTURED DATA
   ====================================================== -->
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+
     "@type": "LandscapingBusiness",
+
     "@id": "https://plslandscapeengineering.com/#business",
 
-    "name": "PLS Landscape & Engineering",
+    "name": "PLS Landscape & Engineering Pte. Ltd.",
+
+    "alternateName": [
+      "PLS Landscape & Engineering",
+      "PLS Landscape"
+    ],
 
     "url": "https://plslandscapeengineering.com/",
 
-    "logo": "https://plslandscapeengineering.com/favicon.svg",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://plslandscapeengineering.com/pls-logo.png",
+      "width": 512,
+      "height": 512
+    },
 
     "image": [
       "https://plslandscapeengineering.com/og-image.jpg"
     ],
 
-    "description": "PLS Landscape & Engineering is a professional landscaping company in Singapore providing landscape design, garden maintenance, commercial landscaping, residential landscaping, arboriculture, tree care, fish pond maintenance and outdoor landscaping solutions.",
+    "description": "PLS Landscape & Engineering Pte. Ltd. is a landscaping company in Singapore providing professional landscape design, garden installation, landscape maintenance, arboriculture, tree care, fish pond maintenance and landscape engineering services.",
 
     "telephone": [
       "+65 8260 9811",
@@ -222,9 +244,13 @@
 
     "address": {
       "@type": "PostalAddress",
+
       "streetAddress": "101 Kitchener Road, #03-04A, Jalan Besar Plaza",
+
       "addressLocality": "Singapore",
+
       "postalCode": "208511",
+
       "addressCountry": "SG"
     },
 
@@ -248,6 +274,7 @@
         ],
 
         "opens": "08:00",
+
         "closes": "19:00"
       }
     ],
@@ -272,6 +299,23 @@
             "name": "Landscape Design",
 
             "serviceType": "Landscape Design",
+
+            "areaServed": {
+              "@type": "Country",
+              "name": "Singapore"
+            }
+          }
+        },
+
+        {
+          "@type": "Offer",
+
+          "itemOffered": {
+            "@type": "Service",
+
+            "name": "Landscape Installation",
+
+            "serviceType": "Landscape Installation",
 
             "areaServed": {
               "@type": "Country",
@@ -439,9 +483,43 @@
           "itemOffered": {
             "@type": "Service",
 
+            "name": "Tree Care",
+
+            "serviceType": "Tree Care",
+
+            "areaServed": {
+              "@type": "Country",
+              "name": "Singapore"
+            }
+          }
+        },
+
+        {
+          "@type": "Offer",
+
+          "itemOffered": {
+            "@type": "Service",
+
             "name": "Fish Pond Maintenance",
 
             "serviceType": "Fish Pond Maintenance",
+
+            "areaServed": {
+              "@type": "Country",
+              "name": "Singapore"
+            }
+          }
+        },
+
+        {
+          "@type": "Offer",
+
+          "itemOffered": {
+            "@type": "Service",
+
+            "name": "Landscape Engineering",
+
+            "serviceType": "Landscape Engineering",
 
             "areaServed": {
               "@type": "Country",
@@ -457,7 +535,7 @@
 
 
   <!-- =====================================================
-       WEBSITE SCHEMA
+       WEBSITE STRUCTURED DATA
   ====================================================== -->
 
   <script type="application/ld+json">
@@ -468,11 +546,17 @@
 
     "@id": "https://plslandscapeengineering.com/#website",
 
-    "name": "PLS Landscape & Engineering",
-
     "url": "https://plslandscapeengineering.com/",
 
-    "description": "Professional landscaping services and outdoor solutions in Singapore.",
+    "name": "PLS Landscape & Engineering",
+
+    "alternateName": [
+      "PLS Landscape & Engineering Pte. Ltd.",
+      "PLS Landscape",
+      "PLS Landscape Singapore"
+    ],
+
+    "description": "PLS Landscape & Engineering Pte. Ltd. provides professional landscaping services in Singapore, including landscape design, garden installation, maintenance, arboriculture, tree care, fish pond maintenance and landscape engineering.",
 
     "publisher": {
       "@id": "https://plslandscapeengineering.com/#business"
@@ -484,7 +568,7 @@
 
 
   <!-- =====================================================
-       WEBPAGE SCHEMA
+       WEBPAGE STRUCTURED DATA
   ====================================================== -->
 
   <script type="application/ld+json">
@@ -501,7 +585,7 @@
 
     "headline": "Professional Landscaping Services in Singapore",
 
-    "description": "PLS Landscape & Engineering provides landscape design, garden maintenance, commercial landscaping, residential landscaping, arboriculture, tree care and outdoor maintenance services in Singapore.",
+    "description": "PLS Landscape & Engineering Pte. Ltd. is a landscaping company in Singapore providing landscape design, garden installation, landscape maintenance, arboriculture, tree care, fish pond maintenance and landscape engineering services.",
 
     "isPartOf": {
       "@id": "https://plslandscapeengineering.com/#website"
@@ -511,13 +595,18 @@
       "@id": "https://plslandscapeengineering.com/#business"
     },
 
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://plslandscapeengineering.com/og-image.jpg"
+    },
+
     "inLanguage": "en-SG"
   }
   </script>
 
 
   <!-- =====================================================
-       BREADCRUMB SCHEMA
+       BREADCRUMB STRUCTURED DATA
   ====================================================== -->
 
   <script type="application/ld+json">
@@ -539,6 +628,22 @@
     ]
   }
   </script>
+
+
+  <!-- =====================================================
+       GOOGLE / SITE IDENTITY HINTS
+  ====================================================== -->
+
+  <meta
+    name="application-name"
+    content="PLS Landscape & Engineering"
+  />
+
+  <meta
+    name="apple-mobile-web-app-title"
+    content="PLS Landscape"
+  />
+
 
 </head>
 
